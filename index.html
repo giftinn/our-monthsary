@@ -16,10 +16,10 @@
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#f3ebe3;
+background:#F3E8DD;
 height:100vh;
 overflow:hidden;
-color:#4b1f28;
+color:#4a1d1f;
 }
 
 #app{
@@ -35,21 +35,24 @@ width:90%;
 max-width:420px;
 max-height:90vh;
 overflow:auto;
-background:#fffaf6;
+background:#FFF8F3;
 border-radius:26px;
 padding:40px 32px;
 text-align:center;
-box-shadow:0 30px 70px rgba(74,20,34,.18);
-border:1px solid rgba(128,33,52,.12);
+box-shadow:0 30px 70px rgba(141,0,4,.18);
+border:1px solid rgba(141,0,4,.08);
 opacity:0;
 transform:scale(.94) translateY(40px);
 transition:.7s cubic-bezier(.19,1,.22,1);
 pointer-events:none;
 }
 
-.card::-webkit-scrollbar{width:6px}
+.card::-webkit-scrollbar{
+width:6px
+}
+
 .card::-webkit-scrollbar-thumb{
-background:#9b4b5a;
+background:#8D0004;
 border-radius:10px
 }
 
@@ -62,33 +65,37 @@ pointer-events:auto;
 h1,h2{
 font-family:'DM Serif Display',serif;
 margin:0 0 14px;
-color:#6e2133;
+color:#8D0004;
 }
 
 p{
 font-size:15px;
 line-height:1.7;
 opacity:.88;
-color:#5b3740;
+color:#5b3737;
 }
 
 button{
 padding:12px 26px;
 border:none;
 border-radius:999px;
-background:linear-gradient(145deg,#7a2032,#a83f58);
-color:#fffaf6;
+background:linear-gradient(145deg,#8D0004,#b30005);
+color:#FFF8F3;
 cursor:pointer;
 margin-top:18px;
 font-size:15px;
 font-weight:600;
 transition:.25s;
-box-shadow:0 10px 25px rgba(122,32,50,.25);
+box-shadow:0 10px 25px rgba(141,0,4,.25);
 }
 
 button:hover{
 transform:scale(1.05);
-box-shadow:0 12px 30px rgba(122,32,50,.4);
+box-shadow:0 12px 30px rgba(141,0,4,.4);
+}
+
+button:active{
+transform:scale(.98);
 }
 
 /* PIN */
@@ -103,14 +110,15 @@ margin:25px 0;
 width:18px;
 height:18px;
 border-radius:50%;
-border:2px solid #8c3146;
-background:#fdf7f2;
+border:2px solid #8D0004;
+background:#FFF8F3;
 }
 
 .dot.fill{
-background:#8c3146;
+background:#8D0004;
 }
 
+/* KEYPAD */
 .keypad{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -132,21 +140,21 @@ margin-top:20px;
 }
 
 #options button{
-background:#f6ede6;
-border:1px solid #a64a5f;
-color:#6e2133;
+background:#F8EEE6;
+border:1px solid #8D0004;
+color:#8D0004;
 box-shadow:none;
 }
 
 #options button:hover{
-background:#f1dfd7;
+background:#F1DED1;
 }
 
 .score-box{
 margin-top:22px;
 font-size:15px;
 letter-spacing:.5px;
-color:#6a3944;
+color:#6a3939;
 }
 
 #feedback{
@@ -154,9 +162,10 @@ margin-top:14px;
 min-height:22px;
 font-size:14px;
 transition:.3s;
-color:#7a2032;
+color:#8D0004;
 }
 
+/* CORRECT */
 .correctAnim{
 animation:pop .4s ease;
 background:#d9f1df !important;
@@ -169,6 +178,7 @@ border-color:#7fc79a !important;
 100%{transform:scale(1)}
 }
 
+/* WRONG */
 .wrongAnim{
 animation:shake .4s;
 background:#f8d7d7 !important;
@@ -183,26 +193,26 @@ border-color:#d98a8a !important;
 
 /* TIMER */
 .lovebox{
-background:linear-gradient(145deg,#fffaf6,#f1ddd7);
+background:linear-gradient(145deg,#FFF8F3,#F1DED1);
 border-radius:22px;
 padding:20px;
 margin-bottom:25px;
-box-shadow:0 12px 35px rgba(122,32,50,.15);
-border:1px solid rgba(122,32,50,.15);
+box-shadow:0 12px 35px rgba(141,0,4,.12);
+border:1px solid rgba(141,0,4,.08);
 }
 
 .timer-title{
 font-size:12px;
 letter-spacing:2px;
 opacity:.65;
-color:#7b4650;
+color:#7a4b4b;
 }
 
 .timer-display{
 font-family:'DM Serif Display',serif;
 font-size:28px;
 margin-top:8px;
-color:#7a2032;
+color:#8D0004;
 letter-spacing:1px;
 animation:pulse 2.5s infinite;
 }
@@ -219,18 +229,18 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:20px;
-border:2px dashed #9b4b5a;
+border:2px dashed #8D0004;
 cursor:pointer;
-background:#fdf6f1;
+background:#FFF8F3;
 transition:.3s;
 }
 
 .reveal-box:hover{
 transform:scale(1.02);
-background:#f7ebe4;
+background:#F7ECE3;
 }
 
-/* LETTER FINAL */
+/* LETTER */
 .letter{
 margin-top:22px;
 font-family:'Cormorant Garamond',serif;
@@ -238,7 +248,7 @@ font-size:18px;
 line-height:1.5;
 letter-spacing:.4px;
 text-align:left;
-color:#4b1f28;
+color:#3b1a1b;
 opacity:.96;
 min-height:100px;
 animation:fadeInText 1.2s ease;
@@ -250,7 +260,7 @@ text-align:right;
 font-family:'Playfair Display',serif;
 font-size:20px;
 letter-spacing:1px;
-color:#8b3b4d;
+color:#8D0004;
 animation:fadeInText 1.8s ease;
 }
 
@@ -285,8 +295,8 @@ pointer-events:none;
 
 <!-- welcome -->
 <section class="card active">
-<h1>I belong to You</h1>
-<p>Special present For someone i love the most.</p>
+<h1>Happy Mensive, Zan</h1>
+<p>Special present For someone i love the most. But you have to unlock it first!</p>
 <button onclick="next()">Unlock</button>
 </section>
 
@@ -327,7 +337,7 @@ Points: <span id="score">0</span> / 3
 <!-- final -->
 <section class="card">
 
-<h1>Between Us in Paris</h1>
+<h1>Another Months of Us</h1>
 
 <div class="lovebox">
 <div class="timer-title">TIME WITH YOU</div>
@@ -381,7 +391,7 @@ if(page===2)loadQuestion();
 ================================================= */
 
 let pinInput = '';
-const correctPin = '2505';
+const correctPin = '0501';
 const pinDisplay = document.getElementById("pin");
 
 function renderDots(){
@@ -429,9 +439,9 @@ function checkPin(){
 ================================================= */
 
 const questions=[
-{q:"When did our story begin?", options:["January","May","March"],correct:1},
-{q:"Who loves the most?", options:["You","100% me","Both"],correct:2},
-{q:"What’s on my mind most of the time?", options:["Game","Someone else","You"],correct:2}
+{q:"What color was the shirt I wore on our very first date?", options:["Pink","White","Cream"],correct:1},
+{q:"How long were we apart before we got back together in January?", options:["7 months","9 months","10 months"],correct:1},
+{q:"what is my favorite milktea brand?", options:["Teazzi","Chagee","Tianlala"],correct:1}
 ];
 
 let currentQ = 0;
@@ -496,7 +506,7 @@ function checkAnswer(i,btn){
 
 function startTimer(){
 
-    const start = new Date("2025-05-25T00:00:00");
+    const start = new Date("2026-01-05T00:00:00");
 
     setInterval(()=>{
 
@@ -526,12 +536,19 @@ function revealMemory(el){
     alreadyRevealed = true;
 
     el.innerHTML = `
-        <img src="pict.jpg"
+        <img src="pict.png"
         style="width:100%;height:100%;object-fit:cover;border-radius:18px">
     `;
 
     const text = `
-        I love you because you actually put effort into loving me. I love you because nobody has ever given me the love that you have given me and you are the only one that could ever love me this way. I love you because you always make me feel like I am worth something. I love you because you have a nurturing nature and you take care of me, especially on days that I need love the most. I love you because you make me smile when I have almost forgotten how to. I love you because you have a huge and honest heart. I love you and every little detail about you. I love you because you are simply you.
+If I were to be asked to whom I dedicate the song "Iris" by Goo Goo Dolls, the one song that holds so many of our memories and perfectly defines our journey — I'd certainly answer your name. No doubt, no hesitation, no second thoughts, and in a heartbeat.
+
+As a person who fears to be shown raw to people, who dreads being misunderstood, and who honestly thought everything beautiful was eventually made to be broken, I am very wholeheartedly loving and expressive when it comes to you. Our relationship has been through so many intense ups and downs, the kind of hardships that I know not everyone could survive or walk through.
+
+To be completely honest, we both felt the immense pain of fighting for us, and there were times when we almost gave up. We nearly threw in the towel a few times, but the fact that we chose to hold onto each other anyway, refusing to truly let go, is what I am most grateful for. We learned so much during the 9 months we were apart.
+In that time, we both tried looking for someone new, only to realize that at the end of the day, we truly needed each other.
+
+It's been exactly five months since we found our way back to each other in January, and it made me realize that you are my entire world. You are my Iris, the one who shows the beauty and colors of life right in my eyes. Loving you is the closest to heaven that I'll ever be. I miss you so much, and I am counting down the days until our reunion two weeks from now. Happy Mensive, My Love.
     `;
 
     const paragraphs = text.trim().split(/\n\s*\n/);
